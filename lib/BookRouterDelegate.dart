@@ -71,13 +71,13 @@ class BookRouterDelegate extends RouterDelegate<BookRoutePath> with ChangeNotifi
 
   @override
   Future<void> setRestoredRoutePath(BookRoutePath configuration) {
-    print("setInitialRoutePath ${configuration.toString()}");
+    print("setRestoredRoutePath ${configuration.toString()}");
     return super.setRestoredRoutePath(configuration);
   }
 
   @override
   Future<void> setNewRoutePath(BookRoutePath path) async {
-    print("setInitialRoutePath ${path.toString()}");
+    print("setNewRoutePath ${path.toString()}");
     if (path.isUnknown) {
       _selectedBook = null;
       show404 = true;
